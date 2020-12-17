@@ -1,0 +1,34 @@
+{% extends 'bootstrap/base.html'%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Patient Interface </title>
+        {% endif %}
+    </head>
+    <body>
+        <!-- Content block -->
+
+        {% block content %}
+
+
+        {% endblock%}
+        {%block styles %}
+        {{super()}}
+        <!--Importing the simple mde css and js files  -->
+        {{ simplemde.css}}
+        {{ simplemde.js }}
+
+        {% endblock %}
+
+        <!-- Navbar block  --> 
+        {% block navbar %}
+        {% include 'navbar.html' %}
+        {% endblock %}
+    </body>
+
+
+</html>
