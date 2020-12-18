@@ -17,6 +17,7 @@ class Config:
     MAIL_USERNAME = 'nyambucindy0@gmail.com'
     MAIL_PASSWORD = 'gitz254*'
     SENDER_EMAIL = 'nyambucindy0@gmail.com'
+    SECRET_KEY= 'gitz254'
 
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
@@ -27,8 +28,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://cynthia:gitz254@localhost/patients'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://cynthia:gitz254@localhost/doctors'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://cynthia:gutz254@localhost/pitches_test'

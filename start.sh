@@ -1,5 +1,5 @@
-export MAIL_USERNAME='kirikabridgit@gmail.com'
-export MAIL_PASSWORD='9089%300'
-export SECRET_KEY= '098765'
+export MAIL_USERNAME='nyambucindy0@gmail.com'
+export MAIL_PASSWORD='gitz254*'
+export SECRET_KEY= 'gitz254'
 
 python3.9 manage.py server
