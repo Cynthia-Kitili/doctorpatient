@@ -17,6 +17,7 @@ class Config:
     MAIL_USERNAME = 'nyambucindy0@gmail.com'
     MAIL_PASSWORD = 'gitz254*'
     SENDER_EMAIL = 'nyambucindy0@gmail.com'
+    SECRET_KEY= 'gitz254'
 
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
