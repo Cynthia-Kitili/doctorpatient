@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% import 'macros.html' as macro %}
+{% block content %}
+<div>
+    <div class="container-fluid">
+        <div class="row">
+        <div class=" col-sm"> 
+            <h2>Patients' Post</h2>
+            <hr>
+            <h4>Name : {{patient.patient_name}}</h4>
+            <h4>Concern : {{patient.patient_comment}}</h4>
+            <h4>Date Posted : {{patient.posted}}</h4>
+        </div>
+        
+    </div> 
+    <hr> <br> 
+    <div class="container-fluid" >
+        <div class="col-sm">
+            <h3 class="">Doctors Comments</h3>
+            <hr>
+        
+            {% if current_user.is_authenticated %}
+            {{ wtf.quick_form(commentForm) }}
+            {%endif%}
+            <hr>
+            <h3>All Comments Posted</h3>
+            <hr>
+                {{macro.displayComments(comments)}}
+            </div>  
+            <hr> 
+             <br>
+        
+        </div>
+        <div class="col-md-2"></div>
+        </div>
+        </div>
+
+</div>
+{% endblock %}

@@ -13,16 +13,72 @@
     line-height: 1;
     margin: 0 auto;
     font-family: 'Yesteryear', cursive, serif;
-    color: #e8d639;
+    color: grey;
     text-shadow: 3px 5px 2px #1f1f1f;
-    text-align: center;">Welcome to DoctorPatient!!!</h2>
+    text-align: center;">Welcome to Daktari!!!</h2>
 <hr>
     <div class="bodyimage" style="background-size: contain; background-repeat: no-repeat;">
-        <p class="para1" style="color: black; font-size: large; font-family: 'Architects Daughter', cursive; text-align: center;">
-         Doctorpatient is a website which offers free medical services to its users and you
-         can always enquire for our services any time.</p>     
-        <img src="https://cdn.hswstatic.com/gif/becoming-doctor.jpg" width="700px" height="400px;">
-          </div>
+        <p class="para1" style="color: black; font-size: large; font-family: 'Architects Daughter', cursive; text-align: center;">An Application that brings the Doctors closer to the patients.<br> Better Health is everyone's priority</p>  
+        <img style="text-align: center;" src="https://cdn.hswstatic.com/gif/becoming-doctor.jpg" text-align="center" width="1900px" height="600px;">
+    </div>
+    <h3 class="text-center text-uppercase text-bold">DoctorPatient Categories</h3>
+<hr>
+<br>
+<div class="container">
+  <p>Patients can enter their details based on the different categories of concerns and they can receive comments from doctors.</p>
+  <a class="btn btn-outline-black btn-md" href="{{url_for('main.newPatient')}}">Enter Patient Details</a>  
+  <div class="row">
+    <div class= "col-md-12">
+                <a href="{{url_for('main.displayDermatologistCategory')}}" class="btn btn-primary btn-center -center">
+                Dermatologist Concerns</a>
+        
+                <a href="{{url_for('main.displayObstetricianCategory')}}" class="btn btn-primary btn-primary -center">
+                Obstetrician Concerns</a>
+
+                <a href="{{url_for('main.displayCardiologistCategory')}}" class="btn btn-primary btn-center -center">
+                Cardiologist Concerns </a>
+       
+                <a href="{{url_for('main.displayGeneralCategory')}}" class="btn btn-primary btn-center -center">
+                 General Concerns</a>
+    </div>  
+  </div>  
+</div>
+<hr>
+<br>
+<div class="container">
+  <p>Docors enter their details so that patients can contact them and book appointments or for patients to reach them faster.</p>
+  <a class="btn btn-outline-black btn-md" href="{{url_for('main.newDoctor')}}">Enter Doctor Details</a> 
+  <div class= "row"   >
+    <div class="col-md-12">
+                  <a href="{{url_for('main.display_DermatologistCategory')}}" class="btn btn-primary btn-center -center">
+                  Dermatologist Doctors </a>
+          
+                  <a href="{{url_for('main.display_ObstetricianCategory')}}" class="btn btn-primary btn-primary -center">
+                   Obstetrician Doctors</a>
+          
+                  <a href="{{url_for('main.display_CardiologistCategory')}}" class="btn btn-primary btn-center -center">
+                  Cardiologist Doctors  </a>
+
+                  <a href="{{url_for('main.display_GeneralCategory')}}" class="btn btn-primary btn-center -center">
+                  General Doctors  </a>
+    </div>
+  </div>  
+</div   >
+<br>
+
+<footer class="page-footer font-mdall ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center ">© 2020 Copyright:
+    <a href="">daktari</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</div>
+    
 </body>
 
 {% endblock %}

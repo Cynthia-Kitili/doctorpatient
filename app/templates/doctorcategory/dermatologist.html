@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{%block content%}
+<div class="">
+
+  <div class="container" >
+    <div class="text-center">
+          <h2 class="h1-responsive font-bold">Dermatologist Doctors</h2>
+        </div>
+      </div>
+    <hr>
+    <div class="container">
+        {{macro.displayDoctors(dermatologist)}}
+    </div>
+</div>
+{%endblock%}
